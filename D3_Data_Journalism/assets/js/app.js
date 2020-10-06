@@ -34,7 +34,7 @@ d3.csv("assets/data/data.csv").then(function(CensusData) {
   const xScale = d3.scaleLinear()
     .domain(d3.extent(CensusData, d => d.age))
     .range([0, width])
-    .nice(); //makes the intersection of axes crisp
+    .nice(); 
 
   const yScale = d3.scaleLinear()
     .domain([6,d3.max(CensusData, d => d.smokes)])
@@ -44,7 +44,6 @@ d3.csv("assets/data/data.csv").then(function(CensusData) {
   // Create Axes
   const xAxis = d3.axisBottom(xScale);
   const yAxis = d3.axisLeft(yScale);
-
 
 // Append axes to the chartGroup
   chartGroup.append("g").attr("transform", `translate(0, ${height})`).call(xAxis);
