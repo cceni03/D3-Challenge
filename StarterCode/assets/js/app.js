@@ -14,12 +14,10 @@ var height = svgHeight - margin.top - margin.bottom;
 // Create an SVG wrapper, append an SVG group that will hold our chart, 
 // Shift the latter by left and top margins.
 var svg = d3
-  .select(".chart")
+  .select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
-  .attr("height", svgHeight)
-  .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  .attr("height", svgHeight);
 
 // Append an SVG group
 var chart = svg.append("g");
